@@ -34,9 +34,13 @@
 + first add/queue all files/directories for addition to the repository
 + add current directory
 > git add .
-+ pull any changes to local space, if there are any
-> git pull --rebase origin main
 + then queue those / them to git
 > git commit -m "name of push"
++ pull any changes to local space, if there are any
+> git pull --rebase origin main
++ finally push all
+> git push origin main
+
+
 
 
