@@ -1,0 +1,29 @@
+++ DOCKER COMMANDS
+
++ run docker and make data available in the container:
+> docker run -it --rm --entrypoint=bash -v $(pwd)/test:/app/test python:3.13.11-slim
+> -it = interactive
+> --rm = remove container on exit 
+> --entrypoint=bash = launch in bash 
+> -v = make virtual drive with...
+    - $(pwd)/test: = mount this local path in...
+    - /app/test python:3.13.11-slim = ...in this local in image; here /home/app/test/
+
+
+++ PYTHON
+++ UV TOOL - manage virtual environment
+
++ create a separate python version
+> pip install uv
++ initialize uv
+> uv init --python 3.13
++ run it
+> uv run python ...args...
+
++ set it as python version to be used in the project in vscode:
+> ctrl+shift+p, python: select interpreter, 
+...if not displayed then use Enter Interpreter Path, navigate to .venv/bin/,
+...select python
+
++ install python packages
+> uv add package1 package2
